@@ -7,7 +7,7 @@ a(k) = -1; b(k) = 3;
 while b(k) - a(k) >= l
     x_1 = (a(k)+b(k))/2 - e;
     x_2 = (a(k)+b(k))/2 + e;
-    if subs(f,x_1) < subs(f,x_2)
+    if f(x_1) < f(x_2)
         a(k+1) = a(k);
         b(k+1) = x_2;
     else
