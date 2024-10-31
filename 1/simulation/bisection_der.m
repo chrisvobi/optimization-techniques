@@ -1,4 +1,5 @@
 function [a,b,k,l] = bisection_der(df,lamda)
+syms x;
 l = lamda;
 k = 1;
 a = []; b = [];
@@ -9,7 +10,8 @@ while n < log2((b(k)-a(k))/l)
 end
 for k = 1:n
     xk = (a(k)+b(k))/2;
-    value = subs(df,xk);
+    val = subs(df,x,xk);
+    value = double(val);
     if value == 0
         return
     elseif value > 0
