@@ -8,7 +8,6 @@ f = x^5 * exp(-x^2-y^2);
 e = 0.01;
 k = 1;
 
-f_values = [];
 xk = []; yk = [];
 
 %% STARTING POINT
